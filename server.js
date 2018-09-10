@@ -11,13 +11,13 @@ io.sockets.on('connection', function (socket) {
  
   console.log('user connected');
   
-  socket.on('disconnect', function(){
-    console.log('user disconnected');
-  });
+  // socket.on('disconnect', function(){
+    // console.log('user disconnected');
+  // });
   
-  socket.on('add-message', (message) => {
-    io.sockets.emit('message', {type:'new-message', text: message});    
-  });
+  // socket.on('add-message', (message) => {
+    // io.sockets.emit('message', {type:'new-message', text: message});    
+  // });
  
 });
 
