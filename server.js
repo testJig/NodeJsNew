@@ -16,7 +16,7 @@ io.sockets.on('connection', function (socket) {
   });
   
   socket.on('add-message', (message) => {
-    io.emit('message', {type:'new-message', text: message});    
+    io.sockets.emit('message', {type:'new-message', text: message});    
   });
  
 });
