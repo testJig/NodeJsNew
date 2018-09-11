@@ -18,7 +18,7 @@ io.sockets.on('connection', function (socket) {
    });
   
    socket.on('add-message', function(message) {
-     //io.sockets.emit('message', {type:'new-message', text: message});    
+     socket.emit('message', {type:'new-message', text: message});    
    });
  
 });
