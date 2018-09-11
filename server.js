@@ -35,10 +35,10 @@ io.sockets.on('connection', function (socket) {
 
 
 
-// app.get('/',function(req,res){
-// console.log('hello from server');
- // res.render('./public/index.html');
-// });
+ app.get('/',function(req,res){
+ console.log('hello from server');
+ res.render('./public/index.html');
+ });
 server.listen(port);
 
 console.log('Server Listening at port'+port);
