@@ -8,7 +8,7 @@ var io      = require('socket.io');
 
 app.use(express.static(__dirname + '/public'));
 
-
+var socket = io.listen(server); 
 
 // io.sockets.on('connection', function (socket) {
  
