@@ -1,4 +1,4 @@
-var express =require('express');
+/*var express =require('express');
 var app = express();
 var port=process.env.PORT || 3000;
 //let http = require('http').Server(app);
@@ -42,4 +42,15 @@ io.sockets.on('connection', function (socket) {
  });
 server.listen(port);
 
-console.log('Server Listening at port'+port);
+console.log('Server Listening at port'+port);*/
+
+var express = require('express');
+var app = express();
+var path = require('path');
+var server = require('http').createServer(app);
+var io = require('../..')(server);
+var port = process.env.PORT || 3000;
+
+server.listen(port, () => {
+  console.log('Server listening at port %d', port);
+});
