@@ -1,3 +1,9 @@
+let app = require('express')();
+let http = require('http').Server(app);
+
+
+
+/*
 var express =require('express');
 var app = express();
 var port=process.env.PORT || 3000;
@@ -44,3 +50,4 @@ var socket = io.listen(server);
 
 console.log('Server Listening at port'+port);
 
+*/
