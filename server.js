@@ -21,6 +21,7 @@ app.get(/^socket.io.js$/, function(req, res) {
 
 io.sockets.on('connection', function (socket) {
  
+ alert('dsfds');
   console.log('user connected');
   
    socket.on('disconnect', function(){
