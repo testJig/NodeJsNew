@@ -6,7 +6,7 @@ var server  = require('http').createServer(app);
 
 var io      = require('socket.io')(server);
 
-//app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 app.get(/^socket.io.js$/, function(req, res) {
 
