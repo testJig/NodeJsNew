@@ -6,7 +6,7 @@ var server  = require('http').createServer(app).listen(port);;
 
 var io      = require('socket.io');
 
-app.use(express.static(__dirname + '/public'));
+//app.use(express.static(__dirname + '/public'));
 
 var socket = io.listen(server); 
 
@@ -36,10 +36,10 @@ var socket = io.listen(server);
        }); 
     });
 
- app.get('/',function(req,res){
- console.log('hello from server');
- res.render('./public/index.html');
- });
+ // app.get('/',function(req,res){
+ // console.log('hello from server');
+ // res.render('./public/index.html');
+ // });
 //server.listen(port);
 
 console.log('Server Listening at port'+port);
