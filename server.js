@@ -24,7 +24,17 @@ var socket = io.listen(server);
  
 // });
 
-
+ socket.on('connection', function (client) {        
+        client.on('add-message', function(msg){ 
+            console.log('message arrive'); 
+           // client.send('some message'); 
+			socket.emit('message', {type:'new-message', text: message}); 
+        });
+     
+        client.on('disconnect', function(){ 
+            console.log('connection closed'); 
+       }); 
+    });
 
  app.get('/',function(req,res){
  console.log('hello from server');
