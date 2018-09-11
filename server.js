@@ -1,3 +1,8 @@
+var app = require('express')();
+var server = require('http').createServer(app);
+var io = require('socket.io')(server);
+
+
 // let app = require('express')();
 // let http = require('http').Server(app);
 // let io = require('socket.io')(http);
@@ -39,7 +44,7 @@
 
 
 
-
+/*
 var express =require('express');
 var app = express();
 var port=process.env.PORT || 3000;
@@ -85,4 +90,5 @@ var socket = io.listen(server);
 //server.listen(port);
 
 console.log('Server Listening at port'+port);
+*/
 
