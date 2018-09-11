@@ -7,7 +7,16 @@ var io      = require('socket.io').listen(server);
 
 //app.use(express.static(__dirname + '/public'));
 
+app.get(/^socket.io.js$/, function(req, res) {
 
+  res.setHeader('Access-Control-Allow-Origin', 'TRUE');
+  // Request headers you wish to allow
+  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+  
+  res.sendfile('socket.io.js');
+  next();
+  
+  });
 
 io.sockets.on('connection', function (socket) {
  
